@@ -48,5 +48,9 @@ public class HelloController {
             this.name = name;
         }
     }
+    //api 는 사용자가 url에 요청을 보낸다 - > responsebody가 붙어있다면
+    // View resolver 대신에 HttpMessageConverter가 동작한다
+    //객체 -> jsonconverter 문자 - > stringConverter
+
 
 }

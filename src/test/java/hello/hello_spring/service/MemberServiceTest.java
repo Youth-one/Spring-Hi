@@ -15,8 +15,9 @@ class MemberServiceTest {
 
     @BeforeEach
     public void beforeEach() {
-        memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
+        memberRepository = new MemoryMemberRepository(); // 인스턴스를 생성해서 넣어줌
+        memberService = new MemberService(memberRepository); // 위에서만든 memberRepository를 넣어줌
+        //그러면 같은 MemoryMemberRepository를 사용하게 된다.
     }
 
     @AfterEach

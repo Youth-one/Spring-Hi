@@ -45,5 +45,5 @@ public class MemberController {
         List<Member> members = memberService.findMembers();
         model.addAttribute("members", members);
         return "members/memberList";
-    }
+    } // 아직은 db 연결하기 이전 메모리 멤버리포지토리에서 얻어오기에 서버 한번 닫고 다시열면 메모리 리포도 초기화 되기에 서버를 restart 하면 그간의 data가 사라진다
 }

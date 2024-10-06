@@ -1,6 +1,7 @@
 package hello.hello_spring;
 
 import hello.hello_spring.repository.JdbcMemberRepository;
+import hello.hello_spring.repository.JdbcTemplateMemberRepository;
 import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
 import hello.hello_spring.service.MemberService;
@@ -28,7 +29,8 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
     //위의 방법은 @Service 와 @Repository를 사용하지 않고 직접 빈을 등록하는 방법이다
     //하지만 이것은 좋은 방법이 아니다 왜냐하면 @Service 와 @Repository를 사용하지 않고 직접 빈을 등록하는 방법은

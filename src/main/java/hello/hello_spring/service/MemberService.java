@@ -3,13 +3,16 @@ package hello.hello_spring.service;
 import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Transactional
+//jpa를 사용할때는 항상 transactional을 사용해야한다
+//그 이유는 jpa는 모든 데이터 변경이 transaction안에서 실행되어야 하기 때문이다
 public class MemberService {
     private final MemberRepository memberRepository;
 

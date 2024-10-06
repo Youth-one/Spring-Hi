@@ -14,3 +14,4 @@ public interface MemberRepository {
 }
 //MemberRepository 는 인터페이스 클래스로 데이터베이스와 상호작용하는 메서드를 정의한
 // 실제데이터 액세스 로직은 이 인터페이스를 구현하는 클래스로 처리된다
+//jpa 는 기존반복코드는 물론이고 기본적인 sql문을 직접 만들어서 실행해준다

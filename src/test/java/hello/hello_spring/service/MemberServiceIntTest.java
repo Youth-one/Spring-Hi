@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,10 +23,11 @@ class MemberServiceIntTest {
     MemberRepository memberRepository ;
 
     @Test
+//    @Commit 하면 테스트가 끝나고 롤백을 하지 않는다
     void join() {
         //given
         Member member = new Member();
-        member.setName("hello2");
+        member.setName("hello3");
 
         //when
         Long saveId = memberService.join(member);

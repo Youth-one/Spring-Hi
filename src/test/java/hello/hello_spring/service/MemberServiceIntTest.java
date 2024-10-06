@@ -41,7 +41,7 @@ class MemberServiceIntTest {
         member1.setName("Spring3");
 
         Member member2 = new Member();
-        member2.setName("Spring6");
+        member2.setName("Spring3");
         //when
         memberService.join(member1);
         assertThrows(IllegalStateException.class, () -> memberService.join(member2));
